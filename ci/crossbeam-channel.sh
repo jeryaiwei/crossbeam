@@ -13,4 +13,6 @@ if [[ "$RUST_VERSION" == "nightly"* ]]; then
     cargo check --bins
 
     RUSTDOCFLAGS=-Dwarnings cargo doc --no-deps --all-features
+
+    ./../ci/miri.sh
 fi

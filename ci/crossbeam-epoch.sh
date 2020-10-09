@@ -22,4 +22,6 @@ if [[ "$RUST_VERSION" == "nightly"* ]]; then
             --features sanitize,nightly \
             --example sanitize
     fi
+
+    ./../ci/miri.sh
 fi

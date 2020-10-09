@@ -23,5 +23,5 @@ if [[ "$RUST_VERSION" == "nightly"* ]]; then
             --example sanitize
     fi
 
-    ./../ci/miri.sh -- -Zmiri-disable-stacked-borrows
+    ./../ci/miri.sh -- -Zmiri-disable-stacked-borrows -Zmiri-ignore-leaks
 fi

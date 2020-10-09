@@ -15,5 +15,5 @@ if [[ "$RUST_VERSION" == "nightly"* ]]; then
 
     RUSTDOCFLAGS=-Dwarnings cargo doc --no-deps --all-features
 
-    ./../ci/miri.sh
+    ./../ci/miri.sh -- -Zmiri-disable-isolation
 fi

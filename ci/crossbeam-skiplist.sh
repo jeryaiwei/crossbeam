@@ -13,5 +13,5 @@ if [[ "$RUST_VERSION" == "nightly"* ]]; then
 
     RUSTDOCFLAGS=-Dwarnings cargo doc --no-deps --all-features
 
-    ./../ci/miri.sh -- -Zmiri-disable-stacked-borrows
+    # ./../ci/miri.sh -- -Zmiri-disable-stacked-borrows
 fi

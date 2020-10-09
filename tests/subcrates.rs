@@ -19,6 +19,7 @@ fn deque() {
     let _ = w.pop();
 }
 
+#[cfg(not(miri))] // FIXME: https://github.com/crossbeam-rs/crossbeam/issues/579
 #[test]
 fn epoch() {
     crossbeam::epoch::pin();
